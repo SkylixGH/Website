@@ -2,13 +2,7 @@ import '../styles/globals.css'
 import Head from "next/head";
 import Nav from "../components/nav/Nav";
 
-let currentLang = "en";
-
-const langStore = {}
-
-export function getComponentLocale<LangType extends Object>(name: string) {
-
-}
+export type languageOptions = "en" | "ru";
 
 function MyApp(App: {
   Component: any,
