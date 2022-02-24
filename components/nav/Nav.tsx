@@ -15,6 +15,7 @@ const languages = {
 
 export default function Nav() {
     const [ loggedIn, setLoggedIn ] = useState(false);
+    const [ sideBarOpen, setSideBarOpen ] = useState(false);
     const { locale } = useRouter();
     const language = languages[locale as languageOptions] as typeof enLang;
 
@@ -57,9 +58,20 @@ export default function Nav() {
                 </div>
 
                 <div className={styles.mobileButtons}>
-                    <button>
+                    <button onClick={() => {
+                        setSideBarOpen(!sideBarOpen);
+                    }}>
                         <Icon icon="fluent:navigation-16-regular" />
                     </button>
+                </div>
+            </div>
+
+            <div className={`${styles.sideBar} ${sideBarOpen ? '' : styles.sideBarClosed}`}>
+                <div className={styles.sideBarHeader}>
+                    <div className={styles.sideBarLogo}>
+                        <Image src={"/LogoIconAuto.svg"} alt={"SKYLIX"}
+                            width={35} height={35} />
+                    </div>
                 </div>
             </div>
         </div>

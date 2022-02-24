@@ -2,30 +2,75 @@
  * This is a dark theme
  */
 
-$layer1: #121212;
-$layer2: #1d1d1d;
-$layer3: #2e2e2e;
-$layer4: #3f3f3f;
-$layer5: #505050;
-$layer6: #616161;
-$layer7: #717171;
-$layer8: #828282;
+.body-content-main {
+    --layer1: #212121;
+    --layer2: #181818;
 
-$dynamic1: rgba(255, 255, 255, 0.05);
-$dynamic2: rgba(255, 255, 255, 0.1);
-$dynamic3: rgba(255, 255, 255, 0.15);
-$dynamic4: rgba(255, 255, 255, 0.2);
-$dynamic5: rgba(255, 255, 255, 0.25);
-$dynamic6: rgba(255, 255, 255, 0.3);
-$dynamic7: rgba(255, 255, 255, 0.35);
-$dynamic8: rgba(255, 255, 255, 0.4);
+    --dynamic1: rgba(255, 255, 255, 0.05);
+    --dynamic2: rgba(255, 255, 255, 0.1);
+    --dynamic3: rgba(255, 255, 255, 0.15);
+    --dynamic4: rgba(255, 255, 255, 0.2);
+    --dynamic5: rgba(255, 255, 255, 0.25);
+    --dynamic6: rgba(255, 255, 255, 0.3);
+    --dynamic7: rgba(255, 255, 255, 0.35);
+    --dynamic8: rgba(255, 255, 255, 0.4);
 
-$text1: #999;
-$text2: #d1d1d1;
-$text3: #fff;
+    --text1: #999;
+    --text2: #d1d1d1;
+    --text3: #fff;
 
-$accent1: #999;
-$accent2: #fff;
+    --accent1: #999;
+    --accent2: #fff;
+    --shadow1: rgba(0, 0, 0, 50%);
+    --shadow2: rgba(0, 0, 0, 100%);
+}
 
-$shadow1: rgba(0, 0, 0, 0.1);
-$shadow2: rgba(0, 0, 0, 0.2);
+/**
+ * This is a light theme
+ */
+
+@media (prefers-color-scheme: light) {
+    .body-content-main, #__next {
+        --layer1: #fff;
+        --layer2: #f1f1f1;
+
+        --dynamic1: rgba(0, 0, 0, 0.05);
+        --dynamic2: rgba(0, 0, 0, 0.1);
+        --dynamic3: rgba(0, 0, 0, 0.15);
+        --dynamic4: rgba(0, 0, 0, 0.2);
+        --dynamic5: rgba(0, 0, 0, 0.25);
+        --dynamic6: rgba(0, 0, 0, 0.3);
+        --dynamic7: rgba(0, 0, 0, 0.35);
+        --dynamic8: rgba(0, 0, 0, 0.40);
+
+        --text1: #505050;
+        --text2: #252525;
+        --text3: #000;
+
+        --accent1: #505050;
+        --accent2: #000;
+        --shadow1: rgba(0, 0, 0, 10%);
+        --shadow2: rgba(0, 0, 0, 20%);
+    }
+}
+
+$layer1: var(--layer1);
+$layer2: var(--layer2);
+
+$dynamic1: var(--dynamic1);
+$dynamic2: var(--dynamic2);
+$dynamic3: var(--dynamic3);
+$dynamic4: var(--dynamic4);
+$dynamic5: var(--dynamic5);
+$dynamic6: var(--dynamic6);
+$dynamic7: var(--dynamic7);
+$dynamic8: var(--dynamic8);
+
+$text1: var(--text1);
+$text2: var(--text2);
+$text3: var(--text3);
+
+$accent1: var(--accent1);
+$accent2: var(--accent2);
+$shadow1: var(--shadow1);
+$shadow2: var(--shadow2);
