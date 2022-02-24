@@ -55,7 +55,7 @@ export default function Nav() {
                             <button>Sign Up</button>
                         </> 
                     } */}
-                    
+
                     <button onClick={() => window.open('https://github.com/skylixgh', '_blank')}>Github</button>
                     <button onClick={() => window.open('https://discord.gg/KxBEUXxh', '_blank')}>Discord</button>
                 </div>
@@ -68,6 +68,8 @@ export default function Nav() {
                     </button>
                 </div>
             </div>
+
+            <div onClick={() => setSideBarOpen(false)} className={`${styles.sideBarCover} ${sideBarOpen ? '' : styles.sideBarCoverClosed}`} />
 
             <div className={`${styles.sideBar} ${sideBarOpen ? '' : styles.sideBarClosed}`}>
                 <div className={styles.sideBarHeader}>
