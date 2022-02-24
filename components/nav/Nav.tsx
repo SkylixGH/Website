@@ -48,13 +48,16 @@ export default function Nav() {
 
             <div className={styles.buttons}>
                 <div className={styles.accountButtons}>
-                    { loggedIn 
+                    {/* { loggedIn 
                         ? <button>Your Account</button>
                         : <>
                             <button>Login</button>
                             <button>Sign Up</button>
                         </> 
-                    }
+                    } */}
+                    
+                    <button onClick={() => window.open('https://github.com/skylixgh', '_blank')}>Github</button>
+                    <button onClick={() => window.open('https://discord.gg/KxBEUXxh', '_blank')}>Discord</button>
                 </div>
 
                 <div className={styles.mobileButtons}>
