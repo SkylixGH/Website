@@ -1,11 +1,12 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import enLang from "../_locale/nav/en";
 import ruLang from "../_locale/nav/ru";
 import { useRouter } from "next/router";
 import { languageOptions } from "../../pages/_app";
 import styles from "./Nav.module.scss";
 import Image from 'next/image';
+import { Icon } from "@iconify/react";
 
 const languages = {
     en: { ...enLang },
@@ -13,6 +14,7 @@ const languages = {
 }
 
 export default function Nav() {
+    const [ loggedIn, setLoggedIn ] = useState(false);
     const { locale } = useRouter();
     const language = languages[locale as languageOptions] as typeof enLang;
 
@@ -28,7 +30,7 @@ export default function Nav() {
         <div className={styles.root}>
             <div className={styles.logo}>
                 <Image src={"/LogoIconAuto.svg"} alt={"SKYLIX"}
-                    width={40} height={40} onClick={() => location.href = "/"} />
+                    width={35} height={35} onClick={() => location.href = "/"} />
             </div>
 
             <div className={styles.links}>{ links.map((link, index) => {
@@ -42,6 +44,24 @@ export default function Nav() {
                     </div>
                 );
             }) }</div>
+
+            <div className={styles.buttons}>
+                <div className={styles.accountButtons}>
+                    { loggedIn 
+                        ? <button>Your Account</button>
+                        : <>
+                            <button>Login</button>
+                            <button>Sign Up</button>
+                        </> 
+                    }
+                </div>
+
+                <div className={styles.mobileButtons}>
+                    <button>
+                        <Icon icon="fluent:navigation-16-regular" />
+                    </button>
+                </div>
+            </div>
         </div>
     );
 }
