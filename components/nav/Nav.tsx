@@ -5,6 +5,7 @@ import ruLang from "../_locale/nav/ru";
 import { useRouter } from "next/router";
 import { languageOptions } from "../../pages/_app";
 import styles from "./Nav.module.scss";
+import Image from 'next/image';
 
 const languages = {
     en: { ...enLang },
@@ -26,20 +27,19 @@ export default function Nav() {
     return (
         <div className={styles.root}>
             <div className={styles.logo}>
-                <Link href="/">
-                    <a>SKYLIX</a>
-                </Link>
+                <Image src={"/LogoIconAuto.svg"} alt={"SKYLIX"}
+                    width={40} height={40} onClick={() => location.href = "/"} />
             </div>
 
             <div className={styles.links}>{ links.map((link, index) => {
                 return (
-                    <>
-                        <Link href={link.href} key={`desktop-${link.href}`}>
+                    <div key={`desktop-${link.href}`}>
+                        <Link href={link.href}>
                             <a>{link.label}</a>
                         </Link>
 
                         { index !== links.length - 1 && <span>•</span> }
-                    </>
+                    </div>
                 );
             }) }</div>
         </div>

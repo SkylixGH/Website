@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import Head from "next/head";
 import Nav from "../components/nav/Nav";
 
@@ -14,7 +14,7 @@ function MyApp(App: {
                 <title>Skylix</title>
 
                 <meta name="description" content="Welcome to the Skylix homepage!" />
-                <link rel="icon" href="https://raw.githubusercontent.com/SkylixGH/Info/main/logos/Logo%20Icon%20Auto.svg" />
+                <link rel="icon" href={"/LogoIconAuto.svg"} />
 
                 <meta property="og:title" content="Skylix" />
                 <meta property="og:description" content="Welcome to the Skylix homepage!" />
@@ -23,9 +23,13 @@ function MyApp(App: {
                 <meta name="theme-color" content="#ffffff" />
             </Head>
 
-            <Nav />
+            <div className={"body-content-main"}>
+                <Nav />
 
-            <App.Component { ...App.pageProps } />
+                <div className={"body-content"}>
+                    <App.Component { ...App.pageProps } />
+                </div>
+            </div>
         </>
     );
 }

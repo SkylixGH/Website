@@ -14,10 +14,28 @@
 .links {
   display: flex;
   gap: 5px;
+  padding: 20px;
+
+  & > div > span {
+    margin-left: 5px;
+  }
+
+  & > div > a {
+    color: $text1;
+    text-decoration: none;
+    transition: 100ms;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      color: $text3;
+      border-color: $text3;
+    }
+  }
 }
 
 .logo {
   font-size: 14px;
+  margin: 0 20px;
 
   a {
     color: $text3;
