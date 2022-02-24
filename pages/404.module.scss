@@ -1,0 +1,52 @@
+@import "../styles/theme";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 5px;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    h1 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    hr {
+        height: 50px;
+        border: none;
+        background: $dynamic4;
+        width: 1px;
+        display: flex;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+.returnHome {
+    font-size: 13px;
+
+    a {
+        margin-left: 10px;
+        transition: 100ms;
+        color: $text1;
+
+        &:hover {
+            color: $text3;
+        }
+    }
+
+    p {
+        color: $text1;
+    }
+}

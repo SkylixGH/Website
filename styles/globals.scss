@@ -2,6 +2,7 @@
 
 html,
 body {
+  background: $layer1;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -19,10 +20,11 @@ body {
 .body-content {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 50px - (15px * 2));
   background: $layer1;
   overflow: auto;
   color: $text2;
+  margin: 15px;
 }
 
 ::-webkit-scrollbar {
