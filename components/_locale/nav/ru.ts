@@ -1,10 +1,10 @@
 import enLang from "./en";
 
 const ruLang: typeof enLang = {
-    link: {
+    links: {
         home: "Дома",
         about: "О нас",
-        docs: "Документы",
+        docs: "Документация",
         contact: "Контакты",
         pricing: "Цены",
     }

@@ -1,9 +1,9 @@
 const enLang = {
-    link: {
+    links: {
         home: "Home",
-        about: "About",
-        docs: "Docs",
-        contact: "Contact",
+        about: "About Us",
+        docs: "Documentation",
+        contact: "Contact Us",
         pricing: "Pricing"
     }
 }
