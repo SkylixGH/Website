@@ -1,5 +1,5 @@
-import enLang from "./_locale/404/en";
-import ruLang from "./_locale/404/ru";
+import enLang from "../locale/404/en";
+import ruLang from "../locale/404/ru";
 import { useRouter } from "next/router";
 import { languageOptions } from "./_app";
 import React from "react";
