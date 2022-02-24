@@ -1,0 +1,32 @@
+@import "../../styles/theme";
+
+.root {
+  display: flex;
+  background: $layer1;
+  color: $text1;
+  width: 100vw;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.links {
+  display: flex;
+  gap: 5px;
+}
+
+.logo {
+  font-size: 14px;
+
+  a {
+    color: $text3;
+    transition: 100ms;
+    text-decoration: none;
+    letter-spacing: 3px;
+
+    &:hover {
+      color: $text1;
+    }
+  }
+}
