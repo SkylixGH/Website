@@ -23,7 +23,13 @@ body {
   background: $layer1;
   overflow: auto;
   color: $text2;
-  padding: 15px;
+  padding: 0 15px;
+}
+
+.body-content > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 ::-webkit-scrollbar {
