@@ -3,7 +3,7 @@ import Banner from "../components/banner/Banner";
 export default function Home() {
     return (
         <div>
-            <Banner imageURL="/HomeBanner.svg" title="S K Y L I X" />
+            <Banner imageURL="https://wallpapercave.com/dwp1x/wp5810523.jpg" subtitle="Taking conversations to the moon! 🚀" title="S K Y L I X" />
 
             {/* <h1 style={{
                 textAlign: "center",

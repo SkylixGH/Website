@@ -2,7 +2,7 @@
  * This is a dark theme
  */
 
-.body-content-main {
+.body-content-main, #__next, .body {
     --layer1: #212121;
     --layer2: #181818;
 
@@ -30,7 +30,7 @@
  */
 
 @media (prefers-color-scheme: light) {
-    .body-content-main, #__next {
+    .body-content-main, #__next, .body {
         --layer1: #fff;
         --layer2: #f1f1f1;
 

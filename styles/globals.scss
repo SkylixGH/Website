@@ -3,6 +3,7 @@
 html,
 body {
   padding: 0;
+  background: var(--layer1);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -35,4 +36,70 @@ body {
 ::-webkit-scrollbar {
   width: 3px;
   height: 3px;
+}
+
+.page-loader {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $layer1;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms;
+}
+
+.page-loader-hidden {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+.page-loader-outer, .page-loader-outer-2, .page-loader-center, .page-loader-inner {
+  display: flex;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  border-top-color: $dynamic4;
+  animation: PageLoader_RingAnimation 1s linear infinite;
+}
+
+.page-loader-center {
+  width: 60px;
+  height: 60px;
+  animation-duration: 0.8s;
+  animation-direction: reverse;
+  border-top-color: $accent2;
+}
+
+.page-loader-outer {
+  animation-duration: 1.2s;
+  width: 80px;
+  height: 80px;
+}
+
+.page-loader-outer-2 {
+  animation-duration: 0.6s;
+  width: 100px;
+  height: 100px;
+  border-top-color: $accent2;
+}
+
+@keyframes PageLoader_RingAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+::selection {
+  background: $accent2;
+  color: $layer1;
 }

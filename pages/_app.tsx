@@ -1,6 +1,7 @@
 import '../styles/globals.scss'
 import Head from "next/head";
 import Nav from "../components/nav/Nav";
+import { useState } from 'react';
 
 export type languageOptions = "en" | "ru";
 
@@ -8,6 +9,23 @@ function MyApp(App: {
   Component: any,
   pageProps: any
 }) {
+    const [ loading, setLoading ] = useState(true);
+
+    if (typeof window !== 'undefined') {
+        document.body.classList.add('body');
+    }
+
+    // See if the document is loaded
+    if (typeof window !== 'undefined') {
+        document.addEventListener('readystatechange', () => {
+            setLoading(false);
+        });
+
+        // if (document.readyState === 'complete') {
+        //     setLoading(false);
+        // }
+    }
+
     return (
         <>
             <Head>
@@ -29,6 +47,13 @@ function MyApp(App: {
                 <div className={"body-content"}>
                     <App.Component { ...App.pageProps } />
                 </div>
+            </div>
+
+            <div className={`page-loader ${!loading ? 'page-loader-hidden' : ''}`}>
+                <div className={"page-loader-inner"} />    
+                <div className={"page-loader-center"} />    
+                <div className={"page-loader-outer"} />    
+                <div className={"page-loader-outer-2"} />    
             </div>
         </>
     );

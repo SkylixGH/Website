@@ -5,6 +5,10 @@ const enLang = {
         docs: "Documentation",
         contact: "Contact Us",
         pricing: "Pricing"
+    },
+    buttons: {
+        login: "Login",
+        register: 'Register',
     }
 }
 

@@ -7,7 +7,11 @@ const ruLang: typeof enLang = {
         docs: "Документация",
         contact: "Контакты",
         pricing: "Цены",
-    }
+    },
+    buttons: {
+        login: "Войти",
+        register: 'Зарегистрироваться',
+    },
 };
 
 export default ruLang;
