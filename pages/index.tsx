@@ -3,7 +3,7 @@ import Banner from "../components/banner/Banner";
 export default function Home() {
     return (
         <div>
-            <Banner imageURL="/BannerMC.gif" subtitle="Taking conversations to the moon! 🚀" title="S K Y L I X" />
+            <Banner imageURL="https://i.pinimg.com/originals/88/1e/97/881e975af06ff67857544c7b64e65cbc.gif" subtitle="Taking conversations to the moon! 🚀" title="S K Y L I X" />
 
             {/* <h1 style={{
                 textAlign: "center",

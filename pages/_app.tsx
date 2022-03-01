@@ -120,6 +120,30 @@ function MyApp(App: {
                         </div>
 
                         <div className={"page-footer-block"}>
+                            <h1>Skylix</h1>
+
+                            <ul>
+                                <li>
+                                    <Link href="/">
+                                        <a>Home</a>
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/about">
+                                        <a>About</a>
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/contact">
+                                        <a>Contact</a>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className={"page-footer-block"}>
                             <h1>Block 2</h1>
 
                             <ul>
