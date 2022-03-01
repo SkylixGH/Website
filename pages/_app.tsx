@@ -54,58 +54,104 @@ function MyApp(App: {
                 <meta name="theme-color" content="#ffffff" />
             </Head>
 
-            <div className={"body-content-main"}>
+            <div onScroll={() => {
+                setLastScrollTop(bodyRef.current!.scrollTop);
+                    
+                if (getScrollDirection() === 'down' && bodyRef.current!.scrollTop >= 70) {
+                    setNavBarCollapsed(true);
+                } else {
+                    setNavBarCollapsed(false);
+                }
+            }} ref={bodyRef} className={"body-content-main"}>
                 <Nav collapsedMobile={navBarCollapsed} />
 
-                <div onScroll={() => {
-                    setLastScrollTop(bodyRef.current!.scrollTop);
-                    
-                    if (getScrollDirection() === 'down' && bodyRef.current!.scrollTop >= 70) {
-                        setNavBarCollapsed(true);
-                    } else {
-                        setNavBarCollapsed(false);
-                    }
-                }} ref={bodyRef} className={"body-content"}>
+                <div className={"body-content"}>
                     <App.Component { ...App.pageProps } />
 
-                    <footer className={"page-footer"}>
-                        <div className={"page-footer-content"}>
-                            <div className={"page-footer-block"}>
-                                <h1>Skylix</h1>
-
-                                <ul>
-                                    <li>
-                                        <Link href="/">
-                                            <a>Home</a>
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link href="/about">
-                                            <a>About</a>
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className={"page-footer-block"}>
-                                <h1>Skylix</h1>
-                            </div>
-
-                            <div className={"page-footer-block"}>
-                                <h1>Block 2</h1>
-                            </div>
-                        </div>
-
-                        <hr />
-
-                        <div className={"page-footer-copyright"}>
-                            <p>
-                                Copyright &copy; {new Date().getFullYear()} Skylix - All rights reserved.
-                            </p>
-                        </div>
-                    </footer>
                 </div>
+                <footer className={"page-footer"}>
+                    <div className={"page-footer-content"}>
+                        <div className={"page-footer-block"}>
+                            <h1>Skylix</h1>
+
+                            <ul>
+                                <li>
+                                    <Link href="/">
+                                        <a>Home</a>
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/about">
+                                        <a>About</a>
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/contact">
+                                        <a>Contact</a>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className={"page-footer-block"}>
+                            <h1>Skylix</h1>
+
+                            <ul>
+                                <li>
+                                    <Link href="/">
+                                        <a>Home</a>
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/about">
+                                        <a>About</a>
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/contact">
+                                        <a>Contact</a>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className={"page-footer-block"}>
+                            <h1>Block 2</h1>
+
+                            <ul>
+                                <li>
+                                    <Link href="/">
+                                        <a>Home</a>
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/about">
+                                        <a>About</a>
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/contact">
+                                        <a>Contact</a>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div className={"page-footer-copyright"}>
+                        <p>
+                                Copyright &copy; {new Date().getFullYear()} Skylix - All rights reserved.
+                        </p>
+                    </div>
+                </footer>
             </div>
 
             <div className={`page-loader ${!loading ? 'page-loader-hidden' : ''}`}>

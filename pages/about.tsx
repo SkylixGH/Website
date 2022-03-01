@@ -4,7 +4,7 @@ import Banner from '../components/banner/Banner';
 export default function About() {
     return (
         <div>
-            <Banner title="About Skylix" subtitle='This page lets you know what Skylix is all about!' />
+            <Banner imageURL='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmopMk3yDGSdf1tuP0-RTtzfor2t5m3C4SQA&usqp=CAU' title="About Skylix" />
 
             <br />
 

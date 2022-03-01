@@ -3,7 +3,7 @@ import Banner from "../components/banner/Banner";
 export default function Home() {
     return (
         <div>
-            <Banner imageURL="https://www.wallpaperflare.com/static/366/315/585/landscape-gray-mountain-wallpaper.jpg" subtitle="Taking conversations to the moon! 🚀" title="S K Y L I X" />
+            <Banner imageURL="/BannerMC.gif" subtitle="Taking conversations to the moon! 🚀" title="S K Y L I X" />
 
             {/* <h1 style={{
                 textAlign: "center",
@@ -14,6 +14,14 @@ export default function Home() {
             }}>
                 Taking conversations to the moon! 🚀
             </p> */}
+
+            <div style={{
+                padding: "20px"
+            }}>
+                <button onClick={() => {
+                    window.location.href = "/tnarr";
+                }}>T N A R A</button>
+            </div>
 
             <h3>Skylix isn{ "'" }t ready yet!</h3>
             <p>Skylix is still in dev, check out our github for more info like our discord server, etc...</p>

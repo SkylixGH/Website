@@ -22,17 +22,17 @@ body {
 
 .body-content-main {
   height: 100vh;
+  overflow-y: auto;
 }
 
 .body-content {
   display: flex;
   flex-direction: column;
   background: $layer1;
-  overflow-y: auto;
   color: $text2;
   padding: 70px 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .body-content > div {
@@ -52,6 +52,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
+  border-radius: 16px;
   background: $accent2;
   border: 4px solid $layer1;
 }
