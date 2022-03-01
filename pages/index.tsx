@@ -3,7 +3,7 @@ import Banner from "../components/banner/Banner";
 export default function Home() {
     return (
         <div>
-            <Banner imageURL="https://wallpaperaccess.com/full/2122580.png" subtitle="Taking conversations to the moon! 🚀" title="S K Y L I X" />
+            <Banner imageURL="https://www.wallpaperflare.com/static/366/315/585/landscape-gray-mountain-wallpaper.jpg" subtitle="Taking conversations to the moon! 🚀" title="S K Y L I X" />
 
             {/* <h1 style={{
                 textAlign: "center",
