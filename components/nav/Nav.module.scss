@@ -13,12 +13,14 @@
   background: $dynamicR4;
   backdrop-filter: blur(5px);
   transition: 300ms;
-  overflow: hidden;
+  outline: 1px solid $dynamic1;
 }
 
 .rootCollapsedMobile {
   @media (max-width: 900px) {
     height: 0;
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
