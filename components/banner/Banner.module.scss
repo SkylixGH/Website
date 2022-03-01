@@ -44,7 +44,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    opacity: 0.6;
+    opacity: 0.4;
 
     img {
         min-width: 100%;
@@ -63,7 +63,6 @@
     padding: 50px 120px;
     color: $text3;
     flex-direction: column;
-    backdrop-filter: blur(2px);
     background: transparent;
     border-radius: 8px;
 

@@ -83,11 +83,17 @@ export default function Nav() {
                 <div onClick={() => setSideBarOpen(false)} className={`${styles.sideBarCover} ${sideBarOpen ? '' : styles.sideBarCoverClosed}`} />
 
                 <div className={`${styles.sideBar} ${sideBarOpen ? '' : styles.sideBarClosed}`}>
-                    <div className={styles.sideBarHeader}>
-                        <div className={styles.sideBarLogo}>
-                            <Image src={"/LogoIconAuto.svg"} alt={"SKYLIX"}
-                                width={35} height={35} />
-                        </div>
+    
+                    <div className={styles.sideBarLinks}>
+                        { links.map((link, index) => {
+                            return (
+                                <div onClick={() => setSideBarOpen(false)} key={`mobile-${link.href}`}>
+                                    <Link href={link.href}>
+                                        <a>{link.label}</a>
+                                    </Link>
+                                </div>
+                            )
+                        }) }
                     </div>
                 </div>
             </div>

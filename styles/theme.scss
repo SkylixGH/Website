@@ -14,6 +14,15 @@
     --dynamic6: rgba(255, 255, 255, 0.3);
     --dynamic7: rgba(255, 255, 255, 0.35);
     --dynamic8: rgba(255, 255, 255, 0.4);
+    
+    --dynamicR1: rgba(0, 0, 0, 0.05);
+    --dynamicR2: rgba(0, 0, 0, 0.1);
+    --dynamicR3: rgba(0, 0, 0, 0.15);
+    --dynamicR4: rgba(0, 0, 0, 0.2);
+    --dynamicR5: rgba(0, 0, 0, 0.25);
+    --dynamicR6: rgba(0, 0, 0, 0.3);
+    --dynamicR7: rgba(0, 0, 0, 0.35);
+    --dynamicR8: rgba(0, 0, 0, 0.4);
 
     --text1: #999;
     --text2: #d1d1d1;
@@ -43,6 +52,15 @@
         --dynamic7: rgba(0, 0, 0, 0.35);
         --dynamic8: rgba(0, 0, 0, 0.40);
 
+        --dynamicR1: rgba(255, 255, 255, 0.05);
+        --dynamicR2: rgba(255, 255, 255, 0.1);
+        --dynamicR3: rgba(255, 255, 255, 0.15);
+        --dynamicR4: rgba(255, 255, 255, 0.2);
+        --dynamicR5: rgba(255, 255, 255, 0.25);
+        --dynamicR6: rgba(255, 255, 255, 0.3);
+        --dynamicR7: rgba(255, 255, 255, 0.35);
+        --dynamicR8: rgba(255, 255, 255, 0.4);
+
         --text1: #505050;
         --text2: #252525;
         --text3: #000;
@@ -65,6 +83,15 @@ $dynamic5: var(--dynamic5);
 $dynamic6: var(--dynamic6);
 $dynamic7: var(--dynamic7);
 $dynamic8: var(--dynamic8);
+
+$dynamicR1: var(--dynamicR1);
+$dynamicR2: var(--dynamicR2);
+$dynamicR3: var(--dynamicR3);
+$dynamicR4: var(--dynamicR4);
+$dynamicR5: var(--dynamicR5);
+$dynamicR6: var(--dynamicR6);
+$dynamicR7: var(--dynamicR7);
+$dynamicR8: var(--dynamicR8);
 
 $text1: var(--text1);
 $text2: var(--text2);

@@ -26,7 +26,9 @@ export default function Banner(props: Props) {
                 <img src={props.imageURL} alt={props.title} />
             </div> }
 
-            <div className={styles.text}>
+            <div style={{
+                ...(props.imageURL ? { backdropFilter: "blur(20px)" } : {}),
+            }} className={styles.text}>
                 <h1>{props.title}</h1>
                 {props.subtitle && <p>{props.subtitle}</p>}
             </div>

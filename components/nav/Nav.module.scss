@@ -6,20 +6,20 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 50px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $layer1;
+  background: $dynamicR4;
+  backdrop-filter: blur(5px);
 }
 
 .inner {
   display: flex;
-  background: $layer1;
   color: $text1;
   width: 100vw;
-  max-width: 1400px;
-  height: 50px;
+  max-width: 1100px;
+  height: 70px;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
@@ -50,7 +50,7 @@
     transition: 100ms;
     position: relative;
     align-items: center;
-    height: 50px;
+    height: 70px;
     display: flex;
     font-size: 12px;
 
@@ -176,11 +176,11 @@
 
 .sideBar {
   position: fixed;
-  top: 50px;
+  top: 70px;
   right: 0;
   background: $layer1;
   width: 300px;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 70px);
   transition: 100ms;
   border-left: 1px solid $dynamic2;
 }
@@ -188,14 +188,15 @@
 .sideBarClosed {
   transform: translate(10%, 0);
   opacity: 0;
+  pointer-events: none;
 }
 
 .sideBarCover {
   display: flex;
   position: fixed;
   width: 100vw;
-  height: calc(100vh - 50px);
-  top: 50px;
+  height: calc(100vh - 70px);
+  top: 70px;
   left: 0;
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px);
@@ -204,4 +205,34 @@
 .sideBarCoverClosed {
   opacity: 0;
   pointer-events: none;
+}
+
+.sideBarLinks {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 20px);
+  padding: 20px;
+  width: calc(100% - 20px);
+  margin: 10px;
+  gap: 5px;
+
+  a {
+    width: 100%;
+    display: flex;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 3px;
+    align-items: center;
+    transition: 100ms;
+    color: $text1;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    font-size: 12px;
+
+    &:hover {
+      background: $dynamic1;
+      color: $text3;
+      border-left: 2px solid $accent2;
+    }
+  }
 }
