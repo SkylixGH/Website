@@ -15,13 +15,11 @@ function MyApp(App: {
     const bodyRef = useRef<HTMLDivElement>(null);
 
     const getScrollDirection = () => {
-        let result: "up" | "down" = "up";
-
         if (bodyRef.current!.scrollTop > lastScrollTop) {
-            result = "down";
+            return "down";
+        } else if (bodyRef.current!.scrollTop < lastScrollTop) {
+            return "up";
         }
-
-        return result;
     }
 
     if (typeof window !== 'undefined') {
