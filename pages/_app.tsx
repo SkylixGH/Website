@@ -12,6 +12,7 @@ function MyApp(App: {
     const [ lastScrollTop, setLastScrollTop ] = useState(0);
     const [ loading, setLoading ] = useState(true);
     const [ navBarCollapsed, setNavBarCollapsed ] = useState(false);
+    const [ documentReady, setDocumentReady ] = useState(false);
     const bodyRef = useRef<HTMLDivElement>(null);
 
     const getScrollDirection = () => {
@@ -26,15 +27,15 @@ function MyApp(App: {
         document.body.classList.add('body');
     }
 
-    // See if the document is loaded
     if (typeof window !== 'undefined') {
         document.addEventListener('readystatechange', () => {
             setLoading(false);
         });
 
-        // if (document.readyState === 'complete') {
-        //     setLoading(false);
-        // }
+        if (document.readyState === 'complete' && !documentReady) {
+            setLoading(false);
+            setDocumentReady(true);
+        }
     }
 
     return (
