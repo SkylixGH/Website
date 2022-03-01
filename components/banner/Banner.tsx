@@ -26,8 +26,6 @@ export default function Banner(props: Props) {
                 <img src={props.imageURL} alt={props.title} />
             </div> }
 
-            { props.imageURL && <div className={styles.cover} /> }
-
             <div className={styles.text}>
                 <h1>{props.title}</h1>
                 {props.subtitle && <p>{props.subtitle}</p>}
