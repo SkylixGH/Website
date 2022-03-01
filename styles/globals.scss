@@ -121,3 +121,39 @@ body {
   background: $accent2;
   color: $layer1;
 }
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  background: $layer2;
+  width: 100%;
+  margin-bottom: -70px;
+
+  hr {
+    border: none;
+    width: calc(100% - 80px);
+    height: 1px;
+    background: $dynamic2;
+    margin: 0 40px;
+  }
+}
+
+.page-footer-copyright {
+  padding: 6px 20px;
+  font-size: 12px;
+}
+
+.page-footer-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-footer-block {
+  flex: 1 1 260px;
+  margin: 10px 20px;
+
+  h1 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+}

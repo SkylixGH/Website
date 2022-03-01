@@ -20,9 +20,15 @@ interface Props {
 export default function Nav(props: Props) {
     const [ loggedIn, setLoggedIn ] = useState(false);
     const [ sideBarOpen, setSideBarOpen ] = useState(false);
-    const { locale } = useRouter();
     const [ darkTheme, setDarkTheme ] = useState<boolean | null>(null);
+    const [ russian, setRussian ] = useState(null as boolean | null);
+    const router = useRouter();
+    const { locale } = router;
     const language = languages[locale as languageOptions] as typeof enLang;
+
+    if (typeof window !== "undefined" && russian === null) {
+        setRussian(window.location.pathname.split('/')[1] === 'ru');
+    }
 
     if (typeof window !== "undefined" && darkTheme === null) {
         setDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
@@ -43,12 +49,12 @@ export default function Nav(props: Props) {
     return (
         <div className={`${styles.root} ${props.collapsedMobile ? styles.rootCollapsedMobile : ''}`}>
             <div className={styles.inner}>
-                <div className={styles.logo}>
+                <div className={styles.logo} onClick={() => router.push('/')}>
                     { darkTheme 
                         ? <Image src={"/LogoIconDark.svg"} alt={"SKYLIX"}
-                            width={35} height={35} onClick={() => location.href = "/"} /> 
+                            width={35} height={35} /> 
                         : <Image src={"/LogoIconLight.svg"} alt={"SKYLIX"}
-                            width={35} height={35} onClick={() => location.href = "/"} />
+                            width={35} height={35} />
                     }
                 </div>
 
@@ -73,6 +79,18 @@ export default function Nav(props: Props) {
                                 <button>{language.buttons.register}</button>
                             </> 
                         }
+
+                        <button style={{
+                            fontSize: "16px"
+                        }} onClick={() => {
+                            if (russian) {
+                                window.location.href = "/";
+                            } else {
+                                window.location.href = "/ru"
+                            }
+                        }}>
+                            <Icon icon="fluent:globe-16-regular" />
+                        </button>
                     </div>
 
                     <div className={styles.mobileButtons}>

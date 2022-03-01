@@ -2,6 +2,7 @@ import '../styles/globals.scss'
 import Head from "next/head";
 import Nav from "../components/nav/Nav";
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 export type languageOptions = "en" | "ru";
 
@@ -70,7 +71,21 @@ function MyApp(App: {
                     <footer className={"page-footer"}>
                         <div className={"page-footer-content"}>
                             <div className={"page-footer-block"}>
-                            
+                                <h1>Skylix</h1>
+
+                                <ul>
+                                    <li>
+                                        <Link href="/">
+                                            <a>Home</a>
+                                        </Link>
+                                    </li>
+
+                                    <li>
+                                        <Link href="/about">
+                                            <a>About</a>
+                                        </Link>
+                                    </li>
+                                </ul>
                             </div>
 
                             <div className={"page-footer-block"}>
@@ -78,9 +93,11 @@ function MyApp(App: {
                             </div>
 
                             <div className={"page-footer-block"}>
-                            
+                                <h1>Block 2</h1>
                             </div>
                         </div>
+
+                        <hr />
 
                         <div className={"page-footer-copyright"}>
                             <p>
@@ -90,8 +107,6 @@ function MyApp(App: {
                     </footer>
                 </div>
             </div>
-
-            
 
             <div className={`page-loader ${!loading ? 'page-loader-hidden' : ''}`}>
                 <div className={"page-loader-inner"} />    
