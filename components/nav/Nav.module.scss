@@ -12,6 +12,14 @@
   justify-content: center;
   background: $dynamicR4;
   backdrop-filter: blur(5px);
+  transition: 300ms;
+  overflow: hidden;
+}
+
+.rootCollapsedMobile {
+  @media (max-width: 900px) {
+    height: 0;
+  }
 }
 
 .inner {

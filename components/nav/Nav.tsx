@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import enLang from "../_locale/nav/en";
 import ruLang from "../_locale/nav/ru";
 import { useRouter } from "next/router";
@@ -13,12 +13,16 @@ const languages = {
     ru: { ...ruLang }
 }
 
-export default function Nav() {
+interface Props {
+    collapsedMobile: boolean;
+} 
+
+export default function Nav(props: Props) {
     const [ loggedIn, setLoggedIn ] = useState(false);
     const [ sideBarOpen, setSideBarOpen ] = useState(false);
     const { locale } = useRouter();
-    const language = languages[locale as languageOptions] as typeof enLang;
     const [ darkTheme, setDarkTheme ] = useState<boolean | null>(null);
+    const language = languages[locale as languageOptions] as typeof enLang;
 
     if (typeof window !== "undefined" && darkTheme === null) {
         setDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
@@ -37,7 +41,7 @@ export default function Nav() {
     ]
 
     return (
-        <div className={styles.root}>
+        <div className={`${styles.root} ${props.collapsedMobile ? styles.rootCollapsedMobile : ''}`}>
             <div className={styles.inner}>
                 <div className={styles.logo}>
                     { darkTheme 
@@ -81,7 +85,6 @@ export default function Nav() {
                 </div>
 
                 <div onClick={() => setSideBarOpen(false)} className={`${styles.sideBarCover} ${sideBarOpen ? '' : styles.sideBarCoverClosed}`} />
-
                 <div className={`${styles.sideBar} ${sideBarOpen ? '' : styles.sideBarClosed}`}>
     
                     <div className={styles.sideBarLinks}>

@@ -1,6 +1,8 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "indent": ["error", 4]
+    "indent": ["error", 4],
+    // Disable exhaustive-deps for react
+    "react-hooks/exhaustive-deps": "off"
   }
 }

@@ -1,7 +1,7 @@
 import '../styles/globals.scss'
 import Head from "next/head";
 import Nav from "../components/nav/Nav";
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export type languageOptions = "en" | "ru";
 
@@ -9,7 +9,20 @@ function MyApp(App: {
   Component: any,
   pageProps: any
 }) {
+    const [ lastScrollTop, setLastScrollTop ] = useState(0);
     const [ loading, setLoading ] = useState(true);
+    const [ navBarCollapsed, setNavBarCollapsed ] = useState(false);
+    const bodyRef = useRef<HTMLDivElement>(null);
+
+    const getScrollDirection = () => {
+        let result: "up" | "down" = "up";
+
+        if (bodyRef.current!.scrollTop > lastScrollTop) {
+            result = "down";
+        }
+
+        return result;
+    }
 
     if (typeof window !== 'undefined') {
         document.body.classList.add('body');
@@ -42,9 +55,17 @@ function MyApp(App: {
             </Head>
 
             <div className={"body-content-main"}>
-                <Nav />
+                <Nav collapsedMobile={navBarCollapsed} />
 
-                <div className={"body-content"}>
+                <div onScroll={() => {
+                    setLastScrollTop(bodyRef.current!.scrollTop);
+                    
+                    if (getScrollDirection() === 'down' && bodyRef.current!.scrollTop >= 70) {
+                        setNavBarCollapsed(true);
+                    } else {
+                        setNavBarCollapsed(false);
+                    }
+                }} ref={bodyRef} className={"body-content"}>
                     <App.Component { ...App.pageProps } />
                 </div>
             </div>
