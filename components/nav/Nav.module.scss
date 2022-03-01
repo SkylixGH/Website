@@ -9,6 +9,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  z-index: 90000;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .links {
@@ -135,7 +139,7 @@
     border: none;
     padding: 0 10px;
     height: 30px;
-    border-radius: 2px;
+    border-radius: 3px;
     transition: 100ms;
     color: $text1;
     background: transparent;
