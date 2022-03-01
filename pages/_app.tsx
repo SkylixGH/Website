@@ -67,28 +67,26 @@ function MyApp(App: {
                 }} ref={bodyRef} className={"body-content"}>
                     <App.Component { ...App.pageProps } />
 
-                    <footer>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                    <footer className={"page-footer"}>
+                        <div className={"page-footer-content"}>
+                            <div className={"page-footer-block"}>
+                            
+                            </div>
+
+                            <div className={"page-footer-block"}>
+                                <h1>Skylix</h1>
+                            </div>
+
+                            <div className={"page-footer-block"}>
+                            
+                            </div>
+                        </div>
+
+                        <div className={"page-footer-copyright"}>
+                            <p>
+                                Copyright &copy; {new Date().getFullYear()} Skylix - All rights reserved.
+                            </p>
+                        </div>
                     </footer>
                 </div>
             </div>
