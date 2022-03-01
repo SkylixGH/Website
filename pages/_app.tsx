@@ -66,8 +66,34 @@ function MyApp(App: {
                     }
                 }} ref={bodyRef} className={"body-content"}>
                     <App.Component { ...App.pageProps } />
+
+                    <footer>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus labore nulla dignissimos tenetur ab id aliquid quidem esse et?
+                    </footer>
                 </div>
             </div>
+
+            
 
             <div className={`page-loader ${!loading ? 'page-loader-hidden' : ''}`}>
                 <div className={"page-loader-inner"} />    
