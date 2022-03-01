@@ -38,54 +38,56 @@ export default function Nav() {
 
     return (
         <div className={styles.root}>
-            <div className={styles.logo}>
-                { darkTheme 
-                    ? <Image src={"/LogoIconDark.svg"} alt={"SKYLIX"}
-                        width={35} height={35} onClick={() => location.href = "/"} /> 
-                    : <Image src={"/LogoIconLight.svg"} alt={"SKYLIX"}
-                        width={35} height={35} onClick={() => location.href = "/"} />
-                }
-            </div>
-
-            <div className={styles.links}>{ links.map((link, index) => {
-                return (
-                    <div key={`desktop-${link.href}`}>
-                        <Link href={link.href}>
-                            <a>{link.label}</a>
-                        </Link>
-
-                        { index !== links.length - 1 && <span>•</span> }
-                    </div>
-                );
-            }) }</div>
-
-            <div className={styles.buttons}>
-                <div className={styles.accountButtons}>
-                    { loggedIn 
-                        ? <button>Your Account</button>
-                        : <>
-                            <button>{language.buttons.login}</button>
-                            <button>{language.buttons.register}</button>
-                        </> 
+            <div className={styles.inner}>
+                <div className={styles.logo}>
+                    { darkTheme 
+                        ? <Image src={"/LogoIconDark.svg"} alt={"SKYLIX"}
+                            width={35} height={35} onClick={() => location.href = "/"} /> 
+                        : <Image src={"/LogoIconLight.svg"} alt={"SKYLIX"}
+                            width={35} height={35} onClick={() => location.href = "/"} />
                     }
                 </div>
 
-                <div className={styles.mobileButtons}>
-                    <button onClick={() => {
-                        setSideBarOpen(!sideBarOpen);
-                    }}>
-                        <Icon icon="fluent:navigation-16-regular" />
-                    </button>
+                <div className={styles.links}>{ links.map((link, index) => {
+                    return (
+                        <div key={`desktop-${link.href}`}>
+                            <Link href={link.href}>
+                                <a>{link.label}</a>
+                            </Link>
+
+                            { index !== links.length - 1 && <span>•</span> }
+                        </div>
+                    );
+                }) }</div>
+
+                <div className={styles.buttons}>
+                    <div className={styles.accountButtons}>
+                        { loggedIn 
+                            ? <button>Your Account</button>
+                            : <>
+                                <button>{language.buttons.login}</button>
+                                <button>{language.buttons.register}</button>
+                            </> 
+                        }
+                    </div>
+
+                    <div className={styles.mobileButtons}>
+                        <button onClick={() => {
+                            setSideBarOpen(!sideBarOpen);
+                        }}>
+                            <Icon icon="fluent:navigation-16-regular" />
+                        </button>
+                    </div>
                 </div>
-            </div>
 
-            <div onClick={() => setSideBarOpen(false)} className={`${styles.sideBarCover} ${sideBarOpen ? '' : styles.sideBarCoverClosed}`} />
+                <div onClick={() => setSideBarOpen(false)} className={`${styles.sideBarCover} ${sideBarOpen ? '' : styles.sideBarCoverClosed}`} />
 
-            <div className={`${styles.sideBar} ${sideBarOpen ? '' : styles.sideBarClosed}`}>
-                <div className={styles.sideBarHeader}>
-                    <div className={styles.sideBarLogo}>
-                        <Image src={"/LogoIconAuto.svg"} alt={"SKYLIX"}
-                            width={35} height={35} />
+                <div className={`${styles.sideBar} ${sideBarOpen ? '' : styles.sideBarClosed}`}>
+                    <div className={styles.sideBarHeader}>
+                        <div className={styles.sideBarLogo}>
+                            <Image src={"/LogoIconAuto.svg"} alt={"SKYLIX"}
+                                width={35} height={35} />
+                        </div>
                     </div>
                 </div>
             </div>

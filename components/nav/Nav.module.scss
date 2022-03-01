@@ -1,18 +1,28 @@
 @import "../../styles/theme";
 
 .root {
-  display: flex;
-  background: $layer1;
-  color: $text1;
-  width: 100vw;
-  height: 50px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
   z-index: 90000;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $layer1;
+}
+
+.inner {
+  display: flex;
+  background: $layer1;
+  color: $text1;
+  width: 100vw;
+  max-width: 1400px;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .links {
