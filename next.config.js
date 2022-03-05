@@ -6,7 +6,7 @@ const nextConfig = {
         locales: ['en', 'ru'],
     },
     images: {
-        domains: ['png.pngtree.com', 'github.com'],
+        domains: ['raw.githubusercontent.com'],
     },
 }
 

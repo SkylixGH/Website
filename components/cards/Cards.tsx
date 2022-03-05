@@ -5,6 +5,7 @@ import Image from 'next/image';
 interface Card {
     title: string;
     description: string;
+    imageURL: string;
     buttons?: {
         label: string;
         primary?: boolean;
@@ -22,17 +23,18 @@ export default function Cards(props: Props) {
 
     return (
         <div className={styles.root}>
+            
             <div className={styles.inner}>
                 {props.cards.map((card, index) => {
                     return (
                         <div className={styles.card} key={index}>
                             <div className={styles.banner}>
                                 <div className={styles.image}>
-                                    <Image layout="fill" src="https://png.pngtree.com/background/20210715/original/pngtree-graphic-design-geometric-shapes-wallpaper-picture-image_1297654.jpg" />
+                                    <Image layout="fill" src={card.imageURL} alt="Err" />
                                 </div>
 
                                 <div className={styles.icon}>
-                                    <Image layout="fill" src="https://github.com/SkylixGH/Nexts/raw/main/readme/nexts-logo.svg" />
+                                    <Image layout="fill" src={card.imageURL} alt="Err" />
                                 </div>
                             </div>
 
