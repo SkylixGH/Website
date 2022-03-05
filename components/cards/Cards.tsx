@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import styles from './Cards.module.scss';
+import Image from 'next/image';
 
 interface Card {
     title: string;
@@ -27,11 +28,11 @@ export default function Cards(props: Props) {
                         <div className={styles.card} key={index}>
                             <div className={styles.banner}>
                                 <div className={styles.image}>
-                                    <img src="https://png.pngtree.com/background/20210715/original/pngtree-graphic-design-geometric-shapes-wallpaper-picture-image_1297654.jpg" alt="Card image" />
+                                    <Image layout="fill" src="https://png.pngtree.com/background/20210715/original/pngtree-graphic-design-geometric-shapes-wallpaper-picture-image_1297654.jpg" />
                                 </div>
 
                                 <div className={styles.icon}>
-                                    <img src="https://github.com/SkylixGH/Nexts/raw/main/readme/nexts-logo.svg" alt="Card image" />
+                                    <Image layout="fill" src="https://github.com/SkylixGH/Nexts/raw/main/readme/nexts-logo.svg" />
                                 </div>
                             </div>
 
