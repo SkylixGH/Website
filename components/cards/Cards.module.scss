@@ -50,7 +50,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background: $layer2;
+                    background: #202020;
 
                     img {
                         width: 100%;
@@ -88,6 +88,7 @@
                 display: flex;
                 padding: 10px;
                 margin-top: auto;
+                gap: 10px;
 
                 .button {
                     display: flex;
@@ -104,9 +105,19 @@
                     transition: 100ms;
                     cursor: pointer;
 
+                    &.primary {
+                        background: $accent2;
+                        color: $layer1;
+                    }
+
                     &:hover {
                         background: $dynamic1;
                         color: $text2;
+
+                        &.primary {
+                            background: $accent1;
+                            color: $layer2;
+                        }
                     }
                 }
             }
